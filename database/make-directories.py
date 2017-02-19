@@ -7,6 +7,9 @@ def process(countrycode):
     countrycode = countrycode.lower()
     if not os.path.exists(countrycode):
         os.makedirs(countrycode)
+    placeholder = countrycode + '/empty'
+    if not os.path.exists(placeholder):
+        open(placeholder, 'a').close()
 
 with open('3166-1-country-codes.csv') as f:
     c = csv.reader(f)
