@@ -1,0 +1,59 @@
+<html>
+<title>OpenResponder</title>
+<head>
+<script language="JavaScript">
+
+    function escapeXml(unsafe) {
+        return unsafe.replace(/[<>&'"]/g, function (c) {
+            switch (c) {
+                case '<': return '&lt;';
+                case '>': return '&gt;';
+                case '&': return '&amp;';
+                case '\'': return '&apos;';
+                case '"': return '&quot;';
+            }
+        });
+    }
+
+    function reqListener () {
+        if (window.DOMParser) {
+            parser = new DOMParser();
+            xmlDoc = parser.parseFromString(this.responseText, "text/xml");           
+            var x = xmlDoc.getElementsByTagName("country");
+            var i;
+            for (i = 0; i < x.length; i++) {
+                document.getElementById("selectCountry").innerHTML += '<option>' + x[i].getAttribute('name') + '</option>';
+            }
+        }
+    }
+
+    var oReq = new XMLHttpRequest();
+    oReq.addEventListener("load", reqListener);
+    oReq.open("GET", "https://raw.githubusercontent.com/linecker/openresponder/master/data/index.xml");
+    oReq.send();
+
+     function DetermineDetailsDone () {
+        console.log(this.responseText);
+        document.getElementById("dumper").innerHTML = escapeXml(this.responseText);
+    }
+    
+    function DetermineDetails() {
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", DetermineDetailsDone);
+        oReq.open("GET", "https://raw.githubusercontent.com/linecker/openresponder/master/data/AT/emergency.xml");
+        oReq.send();
+    }
+    
+</script>
+</head>
+<body>
+Select Country...
+
+<select id="selectCountry" onChange="JavaScript:DetermineDetails()">
+</select>
+
+<pre id="dumper">xxx</pre>
+
+</body>
+</html>
+
