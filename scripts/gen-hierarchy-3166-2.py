@@ -52,6 +52,7 @@ with open('3166-2-country-codes.csv') as f:
         country = country.replace('&','&amp;');
         countryCode = row[4]
         sub = row[2]
+        sub = sub.replace('&','&amp;');
         subCode = row[1]
         addToXml(country, countryCode, sub, subCode)
         createFolder(root, countryCode, subCode)
