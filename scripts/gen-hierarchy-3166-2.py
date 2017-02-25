@@ -39,9 +39,9 @@ def createFolder(root, countryCode, subCode):
         os.makedirs(root + '/' + countryCode)
     if not os.path.exists(root + '/' + countryCode + '/' + subCode):
         os.makedirs(root + '/' + countryCode + '/' + subCode)
-#    placeholder = countrycode + '/empty'
-#    if not os.path.exists(placeholder):
-#        open(placeholder, 'a').close()
+    placeholder = root + '/' + countryCode + '/' + subCode + '/empty'
+    if not os.path.exists(placeholder):
+        open(placeholder, 'a').close()
 
 
 with open('3166-2-country-codes.csv') as f:
@@ -49,6 +49,7 @@ with open('3166-2-country-codes.csv') as f:
     c = csv.reader(f)
     for row in c:
         country = row[0]
+        country = country.replace('&','&amp;');
         countryCode = row[4]
         sub = row[2]
         subCode = row[1]
