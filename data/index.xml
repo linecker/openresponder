@@ -1812,7 +1812,7 @@
         <sub name="Sid" code="HT-SD"/>
         <sub name="Sidès" code="HT-SE"/>
     </country>
-    <country name="Heard & McDonald Islands" code="HM">
+    <country name="Heard &amp; McDonald Islands" code="HM">
         <sub name="Heard & McDonald Islands" code="HM-HM"/>
     </country>
     <country name="Honduras" code="HN">
@@ -4087,7 +4087,7 @@
         <sub name="Lemamel" code="SC-24"/>
         <sub name="Roche Caïman" code="SC-25"/>
     </country>
-    <country name="S.Georgia & S.Sandwich Islands" code="GS">
+    <country name="S.Georgia &amp; S.Sandwich Islands" code="GS">
         <sub name="S.Georgia & S.Sandwich Islands" code="GS-GS"/>
     </country>
     <country name="Sierra Leone" code="SL">
@@ -4497,7 +4497,7 @@
     <country name="St. Martin" code="MF">
         <sub name="St. Martin" code="MF-MF"/>
     </country>
-    <country name="St. Pierre & Miquelon" code="PM">
+    <country name="St. Pierre &amp; Miquelon" code="PM">
         <sub name="St. Pierre & Miquelon" code="PM-PM"/>
     </country>
     <country name="Sudan" code="SD">
@@ -4531,7 +4531,7 @@
         <sub name="Sipaliwini" code="SR-SI"/>
         <sub name="Wanica" code="SR-WA"/>
     </country>
-    <country name="Svalbard & Jan Mayen Islands" code="SJ">
+    <country name="Svalbard &amp; Jan Mayen Islands" code="SJ">
         <sub name="Svalbard & Jan Mayen Islands" code="SJ-SJ"/>
     </country>
     <country name="Swaziland" code="SZ">
@@ -4917,7 +4917,7 @@
         <sub name="Mary" code="TM-M"/>
         <sub name="Aşgabat" code="TM-S"/>
     </country>
-    <country name="Turks & Caicos Islands" code="TC">
+    <country name="Turks &amp; Caicos Islands" code="TC">
         <sub name="Turks & Caicos Islands" code="TC-TC"/>
     </country>
     <country name="Tuvalu" code="TV">
@@ -5541,7 +5541,7 @@
         <sub name="Virgin Islands" code="VG-VG"/>
         <sub name="Virgin Islands" code="VI-VI"/>
     </country>
-    <country name="Wallis & Futuna Islands" code="WF">
+    <country name="Wallis &amp; Futuna Islands" code="WF">
         <sub name="Wallis & Futuna Islands" code="WF-WF"/>
     </country>
     <country name="Western Sahara" code="EH">
