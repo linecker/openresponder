@@ -1,0 +1,7 @@
+<xml>
+    <emergency>
+        <ambulance name="Rettung" tel="144"/>
+        <police name="Polizei" tel="133"/>
+    </emergency>
+</xml>
+
