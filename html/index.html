@@ -1,6 +1,7 @@
 <html>
 <title>OpenResponder</title>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script language="JavaScript">
 
     function escapeXml(unsafe) {
@@ -14,8 +15,9 @@
             }
         });
     }
-
-    function reqListener () {
+    
+    function CountryList () {
+        /*
         if (window.DOMParser) {
             parser = new DOMParser();
             xmlDoc = parser.parseFromString(this.responseText, "text/xml");           
@@ -25,14 +27,37 @@
                 document.getElementById("selectCountry").innerHTML += '<option>' + x[i].getAttribute('name') + '</option>';
             }
         }
+        */
+        
+        // Ask for out location using freegeoip.net.
+        
+        $.getJSON('http://freegeoip.net/json/', CountryList2);
+        // for testing: $.getJSON('http://freegeoip.net/json/8.8.8.8', CountryList2);
+    }
+    
+    function CountryList2(result) {
+        countryUrl = 'https://raw.githubusercontent.com/linecker/openresponder/master/data/';
+        console.log(result);
+        geo = result.country_code + "-" + result.region_code;
+        $("#country").html(result.country_code + ' (' + result.country_name + ')');
+        $("#region").html(geo + ' (' + result.region_name + ')');
+        countryUrl += result.country_code + '/';
+        countryUrl += geo;
+        countryUrl += '/emergency.json';
+        console.log("countyUrl = " + countryUrl);
+        console.log("testaaa");
+        $.getJSON(countryUrl, function(result) {
+            console.log("test" + result);
+            document.getElementById("dumper").innerHTML = result.emergency.ambulance.phone;
+        });
     }
 
     var oReq = new XMLHttpRequest();
-    oReq.addEventListener("load", reqListener);
+    oReq.addEventListener("load", CountryList);
     oReq.open("GET", "https://raw.githubusercontent.com/linecker/openresponder/master/data/index.xml");
     oReq.send();
 
-     function DetermineDetailsDone () {
+    function DetermineDetailsDone () {
         console.log(this.responseText);
         document.getElementById("dumper").innerHTML = escapeXml(this.responseText);
     }
@@ -43,17 +68,51 @@
         oReq.open("GET", "https://raw.githubusercontent.com/linecker/openresponder/master/data/AT/emergency.xml");
         oReq.send();
     }
+
     
 </script>
 </head>
 <body>
-Select Country...
-
+<!--Select Country...
 <select id="selectCountry" onChange="JavaScript:DetermineDetails()">
-</select>
+</select>-->
 
-<pre id="dumper">xxx</pre>
+<div class="container">          
+  <table border="1">
+    <tbody>
+      <tr>
+        <td>ISO 3166-1 Country Code</td>
+        <td id="country">determining...</td>
+      </tr>
+      <tr>
+        <td>ISO 3166-2 Region Code</td>
+        <td id="region">determining...</td>
+      </tr>
+      <tr>
+        <td>e.g. Phone Ambulance</td>
+        <td id="dumper">determining...</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
