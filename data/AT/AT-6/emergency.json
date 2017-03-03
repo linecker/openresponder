@@ -1,10 +1,10 @@
 { "emergency": {
     "ambulance": {
         "name": "Rettung",
-        "phone": "144",
+        "phone": "144"
      },
      "police": {
         "name": "Polizei",
-        "phone": "144",
-     },
+        "phone": "144"
+     }
 }}
