@@ -3,12 +3,12 @@
         "name": "Rettung",
         "phone": "144"
      },
-     "police": {
-        "name": "Polizei",
-        "phone": "144"
-     },
      "fire": {
          "name": "Feuerwehr",
          "phone": "122"
-     }
+     },
+     "police": {
+        "name": "Polizei",
+        "phone": "133"
+     },
 }}
