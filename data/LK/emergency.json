@@ -1,0 +1,11 @@
+{ "emergency": {
+    "ambulance": {
+        "phone": "110"
+     },
+     "fire": {
+         "phone": "110"
+     },
+     "police": {
+        "phone": "119118"
+     }
+}}
