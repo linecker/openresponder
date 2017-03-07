@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!--
+    TODO: check against https://google.github.io/styleguide/xmlstyle.html
+-->
+
+<primaryEmergency>
+    <ambulance>
+        <name>Rettung</name>
+        <phone>144</phone>
+    </ambulance>
+    <fire>
+        <name>Feuerwehr</name>
+        <phone>122</phone>
+    </fire>
+    <police>
+        <name>Polizei</name>
+        <phone>133</phone>
+    </police>
+</primaryEmergency>
+<disabledEmergency>
+    <police>
+        <name>Gehörlosennotruf</name>
+        <sms>0800/133133</sms>
+        <fax>0800/133133</fax>
+        <email>gehoerlosennotruf@polizei.gv.at</email>
+    </police>
+</disabledEmergency>
+<generalEmergency>
+    <medical>
+        <poison>
+            <name>Vergiftungsinformation</name>
+            <phone>01/406 43 43</phone>
+        </poison>
+        <drugsAlcohol>
+            <name>Drogen-Hotline</name>
+            <phone>0810/20 88 77</phone>
+        </drugsAlcohol>
+    </medical>
+    <rescue>
+        <mountainRescue>
+            <name>Bergrettung</name>
+            <phone>140</phone>
+        </mountainRescue>
+        <waterRescue>
+            <name></name>
+        </waterRescue>
+        <searchAndRescue></searchAndRescue>
+    </rescue>
+    <police>
+        <gendarmerie></gendarmerie>
+        <touristPolice></touristPolice>
+        <trafficPolice></trafficPolice>
+        <counterTerroristUnit></counterTerroristUnit>
+        <nationalGuard></nationalGuard>
+    </police>
+    <forest></forest>
+    <infrastructure>
+        <gas>
+            <name>Gasgebrechen</name>
+            <phone>128</phone>
+        </gas>
+        <electricity></electricity>
+        <water></water>
+    </infrastructure>
+    <woman>
+        <name>Frauennotruf</name>
+        <phone>01/71 71 9</phone>
+    </woman>
+    <!-- Is children a sub-category? -->
+    <children>
+        <name>Raht auf Draht</name>
+        <phone>147</phone>
+    </children>
+    <children>
+        <name>Kinder- und Jugendanwalt des Bundes</name>
+        <phone>0800/240264</phone>
+    </children>
+
+    <counseling>
+        <crisis></crisis>
+        <pastoralCare></pastoralCare>
+    </counseling>
+
+
+    <missingPerson>
+        <name></name>
+    </missingPerson>
+
+</generalEmergency>
+
+<nonEmergency>
+    <information>
+        <generalInformation></generalInformation>
+        <medicalAssistance></medicalAssistance>
+        <internet>
+            <fraud></fraud>
+        </internet>
+    </information>
+
+    <discrimination>
+
+    </discrimination>
+
+    <infrastructure>
+        <train>
+            <operator>
+                <name>ÖBB<name>
+                <phone>05 1717</phone>
+            </operator>
+        </train>
+        <car>
+
+            <motorway>
+                <operator>
+                    <name>ASFINAG</name>
+                </operator>
+            </motorway>
+
+            <traffic></traffic>
+            <automobileAssociation>
+                <name>ARBÖ</name>
+                <phone>123</phone>
+            </automobileAssociation>
+
+
+            <automobileAssociation>
+                <name>ÖAMTC</name>
+                <phone>120</phone>
+            </automobileAssociation>
+
+        </car>
+    </infrastructure>
+</nonEmergency>
